@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/logo.png" type="image/png">
+    <title>ProjetoSc - Página Inicial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Conteúdo da página inicial -->
+    <header class="header">
+        <img src="/img/logof.png" alt="fatec" width="120" height="38">
+        <nav>
+            <ul class="header-menu">
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="#graficos">Gráficos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="introducao">
+        <img src="./img/pngegg (2).png" alt="Planeta" width="360" height="520">
+        <h1>RESULTADO <br> QUESTIONÁRIO <br> SOCIOECONÔMICO</h1>
+        <!-- Botão para rolar até a seção de upload -->
+        <button id="scrollButton" class="scroll-btn">
+            <span class="arrow-down"></span>
+        </button>
+    </main>
+
+    <section class="tutorial" id="tutorial">
+        <div class="container">
+            <h1>Como usar?</h1>
+            <div class="step">
+                <h2>Passo 1: Preparação dos Dados</h2>
+                <ol>
+                    <li><strong>Formato do Arquivo:</strong> O programa suporta arquivos no formato XLSX. Certifique-se de ter seus dados organizados em uma planilha neste formato.</li>
+                </ol>
+            </div>
+            <div class="step">
+                <h2>Passo 2: Carregamento do Arquivo</h2>
+                <ol>
+                    <li><strong>Seleção do Arquivo:</strong> Clique no botão "Selecionar Arquivo" para escolher o arquivo que contém seus dados.</li>
+                    <li><strong>Análise dos Dados:</strong> Após selecionar o arquivo, o programa irá processar os dados automaticamente e apresentar as perguntas disponíveis em um seletor.</li>
+                </ol>
+            </div>
+            <div class="step">
+                <h2>Passo 3: Visualização dos Gráficos</h2>
+                <ol>
+                    <li><strong>Escolha uma Pergunta:</strong> Use o seletor para escolher a pergunta que deseja analisar.</li>
+                    <li><strong>Visualização dos Resultados:</strong> O programa irá gerar automaticamente um gráfico adequado para a pergunta selecionada. Se a pergunta for a última da lista, uma nuvem de palavras será exibida.</li>
+                </ol>
+            </div>
+            <div class="step">
+                <h2>Passo 4: Exploração Adicional</h2>
+                <ol>
+                    <li><strong>Alternar Entre Perguntas:</strong> Você pode alternar entre as perguntas usando o seletor a qualquer momento para explorar diferentes aspectos dos dados.</li>
+                    <li><strong>Download de Gráficos:</strong> Se desejar, é possível fazer o download dos gráficos gerados para uso posterior.</li>
+                </ol>
+            </div>
+            <div class="step">
+                <h2>Passo 5: Interpretação dos Resultados</h2>
+                <ol>
+                    <li><strong>Análise dos Gráficos:</strong> Utilize os gráficos gerados para compreender melhor a distribuição e padrões dos seus dados.</li>
+                    <li><strong>Tomada de Decisões:</strong> Com base na análise dos gráficos, tome decisões ou extraia insights relevantes para o seu projeto ou negócio.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Upload de Planilha -->
+    <section class="nova-secao" id="graficos">
+        <h1 class="upload-text">Faça o upload do seu arquivo Excel</h1>
+        <div class="upload-container">
+            <label for="fileInput" class="upload-btn">FAZER UPLOAD</label>
+            <input type="file" id="fileInput" accept=".xlsx">
+        </div>
+        <div class="select-wrapper">
+            <select id="questionSelector"></select>
+        </div>
+        <div id="chartContainer">
+            <!-- Containers para os gráficos serão adicionados dinamicamente pelo JavaScript -->
+        </div>
+    </section>
+
+    <footer class="footer" id="contato">
+        <div class="footer-container">
+            <p class="footer-texto">Em caso de dúvidas, problemas técnicos ou sugestões de melhorias, não hesite em entrar em contato com um dos integrantes da nossa equipe. Estamos aqui para ajudar! Você pode enviar um e-mail. Teremos o prazer em responder às suas perguntas e resolver quaisquer questões que possam surgir durante a utilização do programa de análise de dados. O seu feedback é extremamente importante para nós e nos ajuda a aprimorar continuamente o nosso serviço. Obrigado pelo seu interesse e confiança em nosso trabalho </p>
+
+
+            
+            <ul class="footer-contato">
+                <li>miguel.rocha@fatec.sp.gov.br</li>
+                <li>dany.oliveira@fatec.sp.gov.br</li>
+                <li>dyonatha.cintra@fatec.sp.gov.br</li>
+                <li>gabriella.melo2@fatec.sp.gov.br</li>
+                <li>cyl.errera@fatec.sp.gov.br</li>
+                
+            </ul>
+            <p class="footer-copy">Cg company</p>
+
+        </div>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    
